@@ -14,9 +14,7 @@ open class Person(var age: Int, var name: String) : Human {
 //delegate
 class Resume(p: Person) : Human by p
 
-data class Animal(var type: String, var name: String) {
-
-}
+data class Animal(var type: String, var name: String)
 
 fun main(args: Array<String>) {
 

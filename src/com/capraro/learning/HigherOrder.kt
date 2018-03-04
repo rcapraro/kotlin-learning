@@ -57,4 +57,8 @@ fun main(args: Array<String>) {
     transaction(database) {
         // do something
     }
+
+    //anonymous function...can have multiple return points
+    doUnaryOperation(3, fun(x: Int): Int { return x * x })
+
 }

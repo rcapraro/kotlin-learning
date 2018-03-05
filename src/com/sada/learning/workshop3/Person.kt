@@ -1,4 +1,4 @@
-package com.capraro.learning
+package com.sada.learning.workshop3
 
 interface Human {
     fun dosomething(): String

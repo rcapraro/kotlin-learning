@@ -1,11 +1,11 @@
-package com.capraro.learning
+package com.sada.learning.workshop4
 
 fun outsideFunction1() {
 
     val number =  10
 
     //access to variable is possible: it's a closure (closing on the variable : see tooltip on number)
-    doUnaryOperation(20, {it -> it + number})
+    doUnaryOperation(20, { it -> it + number })
 }
 
 fun anotherUnaryOperation(x: Int, op: (Int) -> Int) {

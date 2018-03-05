@@ -1,4 +1,4 @@
-package com.capraro.learning
+package com.sada.learning.workshop4
 
 import java.util.concurrent.locks.Lock
 
@@ -59,6 +59,15 @@ fun main(args: Array<String>) {
     }
 
     //anonymous function...can have multiple return points
-    doUnaryOperation(3, fun(x: Int): Int { return x * x })
+    doUnaryOperation(3, fun(x): Int { return x * x })
+
+    doUnaryOperation(3, fun(x): Int {
+        if (x > 10) {
+            return x
+        } else {
+            return x * x
+        }
+    }
+    )
 
 }

@@ -4,11 +4,26 @@ interface Human {
     fun dosomething(): String
 }
 
-open class Person(var age: Int, var name: String) : Human {
+open class Person(var age: Int, var name: String, var birthYear: Int) : Human {
 
     override fun dosomething(): String {
         return "something"
     }
+
+    fun printPerson() {
+        println ("Person: $name")
+    }
+
+    val age: Int
+        get() = Calendar.getInstance().get(Calendar.YEAR) - birthYear
+
+    var ssn: String = ""
+        set(value) {
+            if (!value.startsWith("1")) {
+                throw IllegalArgumentException("ssn not valid")
+            }
+            field = value
+        }
 }
 
 //delegate
@@ -16,9 +31,20 @@ class Resume(p: Person) : Human by p
 
 data class Animal(var type: String, var name: String)
 
+object Constants {
+    val PI = 3.14
+}
+
+
 fun main(args: Array<String>) {
 
-    var person = Person(40, "Toto")
+    var person = Person(40, "Toto", 1974)
+
+    println(person.age)
+
+    person.ssn = "123"
+
+    println(person.ssn)
 
     println(Resume(person).dosomething())
 

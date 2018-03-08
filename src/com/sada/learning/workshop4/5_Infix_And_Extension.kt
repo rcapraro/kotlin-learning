@@ -6,7 +6,6 @@ infix fun String.shouldBeEqualSameAs(value: String) = this == value
 
 fun main(args: Array<String>) {
 
-
     "Hello".shouldBeEqualTo("Hello")
 
     "Hello" shouldBeEqualSameAs "Hello"

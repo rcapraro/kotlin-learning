@@ -1,10 +1,12 @@
 package com.sada.learning.workshop3
 
+import java.util.*
+
 interface Human {
     fun dosomething(): String
 }
 
-open class Person(var age: Int, var name: String, var birthYear: Int) : Human {
+open class Person(var name: String, var birthYear: Int) : Human {
 
     override fun dosomething(): String {
         return "something"
@@ -38,7 +40,7 @@ object Constants {
 
 fun main(args: Array<String>) {
 
-    var person = Person(40, "Toto", 1974)
+    var person = Person("Toto", 1974)
 
     println(person.age)
 

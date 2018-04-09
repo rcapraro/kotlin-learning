@@ -7,6 +7,7 @@ import arrow.syntax.function.forwardCompose
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
+
 class CompositionTest {
 
     private val add5 = { i: Int -> i + 5 }
@@ -15,7 +16,8 @@ class CompositionTest {
     private val sum2ints = { x:Int, y:Int -> x+y}
     private val curried = sum2ints.curried()
 
-    @Test fun testAndThen() {
+    @Test
+    fun testAndThen() {
         val add5ThenMulitplyBy2 = add5 andThen multiplyBy2
         Assertions.assertEquals(add5ThenMulitplyBy2(2), 14)
     }

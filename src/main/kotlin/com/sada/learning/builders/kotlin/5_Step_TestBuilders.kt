@@ -55,5 +55,5 @@ private fun ContratBuilder.aliment(a: AlimentBuilder.() -> Unit) {
 
 @ContractMarker
 private fun AlimentBuilder.garantie(g: GarantieBuilder.() -> Unit) {
-    garantie = GarantieBuilder().apply(g).build();
+    garantie = GarantieBuilder().apply(g).build()
 }
